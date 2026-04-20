@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links-reight a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.nav-links-reight a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    height: 80vh;
+    background-image: url(./images/mirosoft.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.banner--content {
+    max-width: 500px;
+}
+
+.banner-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.banner-btn {
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.banner-btn:hover {
+    background: darkblue;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 50px 80px;
+}
+
+.card {
+    width: 23%;
+    background: #f0f0f0;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card-button {
+    background: blue;
+    color: rgb(168, 28, 28);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+.card-button:hover {
+    background: darkblue;
+}
+
+.onenote-section {
+    background-image: url(./images/m360.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding-right: 80px;
+    margin: 0 auto;
+    justify-content: flex-end;
+
+}
+.onenote-card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.onenote-card h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.onenote-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    
+}
+.onenote-card button {
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    
+}
+.onenote-card button:hover {
+    background: darkblue;
+}
+.footer {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+}
+.footer-column {
+    width: 16%;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.footer-column ul {
+    list-style: none;
+}
+.footer-column li {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color:darkslategrey;
+    cursor: pointer;
+}
+
+.footer-column li:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1024px) {
+    .card-section {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 48%;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-column {
+        width: 30%;
+    }
+
+}
+
+@media (max-width:786px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links,
+    .nav-reight {
+        display: none;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .nav-links.active,
+    .nav-reight.active {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .banner {
+        padding-left: 30px;
+        height: 400px;
+    }
+
+    .banner-content h1 {
+        font-size: 24px;
+    }
+
+    .cards-section {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .card {
+        width: 100%;
+
+    }
+
+    .onenote-section {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .onenote-card {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+}
